@@ -7,7 +7,7 @@ type httpDB struct {
 	metrics Metrics
 }
 
-var DB = func(conf datasource.Config, logger datasource.Logger, metrics datasource.Metrics) *httpDB {
+var DB = func(conf datasource.Config, logger datasource.Logger, metrics datasource.Metrics) datasource.HttpDb {
 	return &httpDB{
 		logger:  logger,
 		metrics: metrics,
